@@ -3,7 +3,7 @@ function generateMarkdown(data) {
   const badgeName = data.license.split(' ').join('%20')
   return `# ${data.title}
 
-[license-badge](https://img.shields.io/badge/license-${badgeName}-green) 
+![license-badge](https://img.shields.io/badge/license-${badgeName}-green) 
   
 ## Description
   
@@ -39,8 +39,8 @@ ${data.contGuidelines}
 ${data.testInstructions}
   
 ## Questions
-  
-My GitHub username is ${data.gitHub}. 
+
+Link to my [GitHub Profile](https://github.com/${data.gitHub})
 For additional questions feel free to email ${data.email}
     `;
 }

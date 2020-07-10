@@ -73,9 +73,7 @@ const questions = [
 function writeToFile(fileName, data) {
     
     const markdownFile = generateMD(data);
-
     writeFileAsync(fileName, markdownFile);
-    console.log(markdownFile);
 }
 
 // function to initialize program
@@ -86,6 +84,7 @@ function init() {
     inquirer.prompt(questions)
     .then(function(responses) {
         writeToFile(`${responses.title}.md`,responses)
+        console.log("README written succesfully!!")
     })
 }
 
